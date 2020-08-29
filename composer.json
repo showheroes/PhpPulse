@@ -1,25 +1,17 @@
 {
-  "name": "allejo/php-pulse",
+  "name": "showheroes/php-pulse",
   "keywords": ["dapulse", "api", "monday.com"],
-  "homepage": "http://docs.allejo.io/PhpPulse/",
-  "description": "A wrapper for working with the monday.com (formerly known as DaPulse) API",
+  "description": "A wrapper for working with the monday.com (formerly known as DaPulse) API v2",
   "type": "library",
   "license": "MIT",
   "require": {
-    "php": ">=5.5.0"
+    "php": ">=7.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "^4.8.31",
-    "php-vcr/php-vcr": "^1.3"
   },
   "autoload": {
     "psr-4": {
-      "allejo\\DaPulse\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "allejo\\DaPulse\\Tests\\": "tests/"
+      "ShowHeroes\\DaPulse\\": "src/"
     }
   },
   "authors": [
@@ -39,12 +31,6 @@
     "build": [
       "composer install --no-dev",
       "phpab -p -o phppulse-$1.phar --bzip2 src/"
-    ],
-    "test": [
-      "export TRAVIS=true && export apiToken=YourApiKeyHere && phpunit"
-    ],
-    "test-live": [
-      "phpunit"
     ]
   },
   "extra": {
